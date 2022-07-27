@@ -2,7 +2,7 @@
 
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -15,12 +15,13 @@ const config = {
     open: true,
     host: "localhost",
     static: {
-      directory: __dirname,
+      directory: path.resolve(__dirname, "dist"),
   },
   },
   plugins: [
+
+    new HtmlWebpackPlugin({template: "./src/index.html"}),
     new MiniCssExtractPlugin({filename:"styles.css"}),
-    new ImageminWebpWebpackPlugin()
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
@@ -38,9 +39,10 @@ const config = {
         test: /\.(eot|svg|ttf|woff|woff2|gif|png|jpg|webp)$/i,
         type: "asset",
       },
-
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
+      },
     ],
   },
 };

@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { App } from "./components/index.jsx"
+import { Content } from "./components/Content/Content.component.jsx"
 import "./styles/index.sass"
 
 const root = ReactDOM.createRoot(
@@ -8,5 +8,5 @@ const root = ReactDOM.createRoot(
 )
 
 root.render(
-    <App />
+    <Content />
 )

@@ -51,13 +51,44 @@
         <meta charset="utf-8" />
         <meta name="description" content="It is a test task for abz.agency from Vlad Chornii">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link media="screen" as="style" rel="preload" onload="this.rel='stylesheet'" href="./dist/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <script async src="./dist/main.js"></script>
         <title>Webpack App</title>
     </head>
     <body>
-        <div class="root"></div>
+        <header class="header">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <img src="./media/Logo.svg" alt="logo" class="logo__image"/>
+                </a>
+                <nav class="navbar">
+                    <a class="nav-item" type="button" href="#list">Users</a>
+                    <a type="button" href="#form"> Sign up </a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="preview">
+                <img srcset="
+                ./media/preview-large.webp 1024w,
+                ./media/preview-small.webp 748w,
+                " alt="main-image" class="preview__image"/>
+                <div class="preview__content">
+                    <h1>Test assignment for front-end developer</h1>
+                    <p class="preview__description">
+                        What defines a good front-end developer is one that
+                        has skilled knowledge of HTML, CSS, JS with a vast
+                        understanding of User design thinking as they'll be
+                        building web interfaces with accessibility in mind.
+                        They should also be excited to learn, as the world of
+                        Front-End Development keeps evolving.
+                    </p>
+                    <a href="#form" type="button" class="preview__button">
+                        Sign up
+                    </a>
+                </div>
+            </section>
+            <div class="root"></div>
+        </main>
     </body>
 </html>
