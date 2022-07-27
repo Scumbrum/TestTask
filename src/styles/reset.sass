@@ -1,0 +1,63 @@
+* 
+    border: 0
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Nunito', sans-serif
+    font-style: normal
+    font-weight: 400
+    color: $text-dark
+
+main
+    margin: 0 auto
+    width: 100%
+    max-width: 1170px
+
+h1 
+    font-size: 40px
+    line-height: 100%
+
+body
+    font-size: 16px
+    line-height: 26px
+    background-color: $background-color
+    padding-bottom: 100px
+
+header 
+    background-color: $paper
+
+button, a[type="button"]
+    display: inline-block
+    width: fit-content
+    text-align: center
+    background-color: $primary-color
+    text-decoration: none
+    font-size: 16px
+    line-height: 26px
+    border-radius: 80px
+    min-width: 100px
+    padding: 4px 19px
+    cursor: pointer
+
+input
+    font-size: 16px
+    line-height: 26px
+    width: 100%
+    padding: 14px 16px
+    background-color: transparent
+    &:focus
+        outline: none
+    &:placeholder
+        color: $text-secondary
+
+ul, ol
+    list-style: none
+
+button[disabled]
+    background-color: $disabled-color
+    color: $text-light
+
+.error
+    color: $error!important
+
+

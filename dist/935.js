@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_webpack_project=self.webpackChunkmy_webpack_project||[]).push([[935],{935:(e,p,c)=>{e.exports=c.p+"70f71f35ce6d686c8162.webp"}}]);
